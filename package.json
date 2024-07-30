@@ -1,0 +1,38 @@
+{
+	"name": "iffyjs",
+	"version": "1.0.1",
+	"description": "iffy.com javascript wrapper",
+	"main": "src/index.ts",
+	"type": "module",
+	"exports": {
+		"import": "./dist/index.js",
+		"require": "./dist/index.cjs",
+		"types": "./dist/index.d.ts"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "tsup ./src/index.ts --format esm,cjs --dts && tsc --emitDeclarationOnly --declaration",
+		"dev": "tsup ./src/index.ts --format esm,cjs --watch"
+	},
+	"files": [
+		"dist/**"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+ssh://git@github.com/abdulhdr1/iffyjs.git"
+	},
+	"keywords": [
+		"iffy",
+		"moderation"
+	],
+	"author": "Abdul Haidar",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/abdulhdr1/iffyjs/issues"
+	},
+	"homepage": "https://github.com/abdulhdr1/iffyjs#readme",
+	"devDependencies": {
+		"tsup": "^8.2.3",
+		"typescript": "^5.5.4"
+	}
+}
