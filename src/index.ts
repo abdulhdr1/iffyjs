@@ -83,10 +83,10 @@ export class Iffy {
 
 	/**
 	 * Sends a moderation request to the Iffy API.
-	 * @param {Content} content - The content to be moderated.
+	 * @param {Content | Content[]} content - The content to be moderated.
 	 * @returns {Promise<ModerateResponse>} A promise that resolves to the moderation response.
 	 */
-	async moderate(content: Content): Promise<ModerateResponse> {
+	async moderate(content: Content | Content[]): Promise<ModerateResponse> {
 		try {
 			const url = `${this.baseUrl}/moderate`;
 
